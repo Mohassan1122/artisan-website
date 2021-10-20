@@ -1,13 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-    <title>My Artisan</title>
-
+<title>My Artisan</title>
+  <link rel="icon" href="./images/D0Sm15i.png">
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" >
 
     <!-- Custom fonts for this template -->
     <link href="fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -15,114 +14,70 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="image/md.png">
 </head>
 
-<body class=" bg-light">
+<body class=" bg-default">
+    <div class="container">
+        <div class="mt-3 ml-3"><a href="index.php"><img src="./images/logo1.png" alt="Logo" width="200px" /></a></div>
+    </div>
+    <hr>
 
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-static-top">
-        <!-- Brand/logo -->
-        
-            <img src="image/pic01.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
-           <a class="navbar-brand" href="./index.php"> My Artisan</a>
-        
+    <div class="container border" style="height:600px; width:500px; ">
+        <div class="row" style="font-family: Arial, Helvetica, sans-serif;">
+            <h3 class="mx-auto p-3 mt-4 mr-4 ml-4  text-darker"> Log in to Artisan Network</h3>
 
-        <div class="collapse  navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link active" href="index.php"><i class="fa fa-home" aria-hidden="true"></i> HOME</a>
-                <a class="nav-item nav-link" href="signup.php">Signup</a>
-                <a class="nav-item nav-link" href="login.php">Signin</a>
-                <a class="nav-item nav-link" href="#">About Us</a>
-            </div>
         </div>
+        <form class="form-horizontal mr-4 ml-4 p-4" style=" border-radius: 0.3em;" action="function.php" method="POST">
 
-    </nav>
-
-    <header class="masthead" style="background-image: url('image/Cap2.PNG')">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 p-3 mt-4 mx-auto">
-                    <marquee width="60%" direction="left" height="100px" class="text-light">
-                        Login Your account here.
-                    </marquee>
-                    <div class="site-heading p-2 ">
-                        <h1 class="">my artisan</h1>
-                        <span class="subheading m-2 p-2">A Place for all kinds of artisan form different part of the World</span>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <?php
-    if (isset($_GET['msg'])) {
-    ?>
-        <pre>
-<div class="container border shadow rounded text-center  text-dark col-md-12 mb-n1  bg-light">
-<?php
-        echo "<h1> Welcome To Artisan Site </h1>";
-        echo "<p class=\"lead p-4\">Weldone, By signingup, you've taken your first step towords a happier, easy life. we'll do everything we can to help and surpport you..</p> ";
-?>
-</div>
-            </pre>
-    <?php
-    }
-
-    ?>
-    <?php
-    if (isset($_GET['erorr'])) {
-    ?>
-        <pre>
-<div class="container border shadow rounded text-center  text-dark col-md-12 mb-n1  bg-light">
-<?php
-        echo "<ul>" . $_GET['erorr'] . "</ul>";
-        
-?>
-</div>
-            </pre>
-    <?php
-    }
-
-    ?>
-    <br>
-    <div class="container border shadow" style="text-align:center; height:500px; width:500px; background-color:#fff;">
-        <div class="row" style="height: 90px;width:500px; background-color:#868e96;">
-            <h1 class="mx-auto p-3 text-white"><i class="fa fa-lock" aria-hidden="true"></i> Login</h1>
-
-        </div><br /><br />
-        <form class="form-horizontal" style="padding: 15px; margin: 0 auto; border-radius: 0.3em;" action="function.php" method="POST">
-
-            <div class="input-group">
+            <div class="input-group p-2">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
                 </div>
                 <input type="text" name="new_email" class="form-control" placeholder="username or email" />
             </div><br />
 
-            <div class="input-group">
+            <div class="input-group mt-3 p-2">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fa fa-key icon"></i></span>
                 </div>
                 <input type="Password" name="new_password" class="form-control" placeholder="password" />
             </div><br />
 
-            <button type="submit" name="submit" class="btn btn-success"><span class="glyphicon glyphicon-off"></span> Login</button>
-        </form>
-        <br />
-        <br />
+            <div class="form-check ">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Remember password
+                </label>
+            </div>
+            <button type="submit" name="submit" class="btn btn-primary mt-4" style="width: 100%; "><span class="glyphicon glyphicon-off"></span> SIGN IN</button>
 
-        <center>
-            <div style="border:1px solid black;height:1px;width:300px;"></div>
-        </center><br />
-        <div class="footer">
-            <p>Don't have an Account! <a href="signup.php">Sign Up Here</a></p>
-            <p>Forgot <a href="#">Password?</a></p>
+
+            <p style="font-family: 'Times New Roman', Times, serif;" class="text-muted small-text text-center mt-3">or login with</p>
+            <div class="d-flex justify-content-between">
+                <button type="button" style="background: #67cf7f; padding: 5px 30px; color: #fff;" class="btn"><i class="fab fa-google"></i> Google</button>
+                <button type="button" style="background: #43619d; padding: 5px 30px; color: #fff;" class="btn"><i class="fab fa-facebook-f"></i> Facebook</button>
+            </div>
+
+        </form>
+        <hr class="ml-5 mr-5">
+        <div class="d-flex justify-content-between" style="font-family: 'Times New Roman', Times, serif;">
+            <a class="ml-5" href="forgot.html" style="text-decoration: none;">Forgot password ?</a>
+            <p class="mr-4 pr-3">Don't have an Account? <a href="signup.php" style="text-decoration: none;">Join now</a></p>
         </div>
 
     </div>
-    <br />
-    <?php include './include/footer.php'; ?>
+    <footer style="background-color: #f0efe6;">
+        <div class="container mt-4 p-4 text-center">
+            <p>©2021 Artisan Network, inc. All rights Reversed</p>
+            <span><a class="mt-4 text-dark" href="">Terms of Service</a> </span> <br>
+            <span><a class="text-dark" href="">Privacy Policy</a></span> <br>
+            <span><a class="text-dark" href="">Accessibility</a></span>
+
+        </div>
+
+    </footer>
+
+
 
 
 </body>

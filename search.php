@@ -106,10 +106,10 @@
               }
               $search = $_POST['search'];
 
-              $query = "SELECT * FROM artisan WHERE skill LIKE '%$search%'";
+              $query = "SELECT * FROM register WHERE skill LIKE '%$search%'";
               $search_query = mysqli_query($connection, $query);
               if (!$search_query) {
-                die("QUERY FAILED" . mysqli_error($search_query));
+                echo "<script>alert('Query Failed');</script>";
               }
               $count = mysqli_num_rows($search_query); ?>
               <?php
@@ -120,11 +120,11 @@
               ?><?php
               $id = $row['id'];
             
-              $query2 = "SELECT * FROM artisan, completeprofile WHERE artisan.id = $id  AND completeprofile.artisan_id=$id";
+              $query2 = "SELECT * FROM register, completeprofile WHERE register.id = $id  AND completeprofile.register_id=$id";
               $search_query2 = mysqli_query($connection, $query2);
               //print_r($search_query2);
               if (!$search_query) {
-              die("QUERY FAILED" . mysqli_error($search_query2));
+                echo "<script>alert('Query Failed');</script>";
               }
               $row = mysqli_fetch_assoc($search_query2);?>
               <div class="row mt-5 p-3">
@@ -136,7 +136,7 @@
                         <div class="row align-items-center h-100">
                             <div class="col clear-fix">
                                 
-                                <a href="loginResult.php?id=<?php echo $row['artisan_id']; ?>" class=" btn btn-success m-4 float-right">
+                                <a href="loginResult.php?id=<?php echo $row['register_id']; ?>" class=" btn btn-success m-4 float-right">
                                     Contact!
                                 </a>
                                 <p class="lead"><?php echo $row['fullName'];  ?>.</p>

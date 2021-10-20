@@ -10,18 +10,18 @@ if (isset($_POST['submit'])) {
         $errorCount++;
        
     }
-    $new_email = addslashes($_POST['new_email']);
-    $new_password = addslashes($_POST['new_password']);
+    $new_email = mysqli_real_escape_string($connection, $_POST['new_email']);
+    $new_password = mysqli_real_escape_string($connection, $_POST['new_password']);
 
-    $result1 = mysqli_query($connection, "SELECT user_password FROM artisan WHERE `email` = '{$new_email}'");
+    $result1 = mysqli_query($connection, "SELECT user_password FROM register WHERE `email` = '{$new_email}'");
 
     if (mysqli_error($connection)) {
-        $erorr.="Connection failed";
-        $errorCount++;
+        echo "<script>alert('Connection failed');</script>";
+        echo "<script>window.location.href='login.php';</script>";
     }
     if (mysqli_num_rows($result1) === 0) {
-        $erorr.="<li> Account does not Exist </li> ";
-        $errorCount++;
+        echo "<script>alert('Account does not Exist');</script>";
+        echo "<script>window.location.href='login.php';</script>";
     }
     $new_password = md5($new_password);
     $row = mysqli_fetch_array($result1);
@@ -29,12 +29,21 @@ if (isset($_POST['submit'])) {
     
     if ($new_password == $row['user_password']) {
 
-        $query2 = "SELECT * FROM artisan WHERE `email` = '$new_email'";
+        $query2 = "SELECT * FROM register WHERE `email` = '$new_email'";
                 $result = mysqli_query($connection, $query2);
-                if (mysqli_fetch_array($result)) {
+                if ($row = mysqli_fetch_array($result)) {
                     $_SESSION['email'] = $new_email;
-                    $_SESSION['id'] = $id;
-                    header("location: dashboard.php");
+
+                    if($row['service'] == 'Artisan')
+                    {
+                        header("location: artisanHome.php");
+                    }
+                    else if($row['service'] == 'Client')
+                    {
+                        header("location: clientHome.php");
+                    }
+
+                    
                 }
                 
 
@@ -42,12 +51,7 @@ if (isset($_POST['submit'])) {
                 mysqli_close($connection);
             
      }else {
-        $erorr.="<li> Password does not Exist</li>";
-        $errorCount++;
-    }
-    if ($errorCount !== 0) {
-        header("Location: ./login.php?erorr=" . $erorr);
-        die();
+        echo "<script>alert(' Password does not Exist');</script>";
+        echo "<script>window.location.href='login.php';</script>";
     }
 }
-?>

@@ -5,7 +5,7 @@ session_start();
 if (isset($_SESSION['email'])) {
     $new_email = $_SESSION['email'];
 
-    $query2 = "SELECT id FROM artisan WHERE email = '$new_email'";
+    $query2 = "SELECT * FROM register WHERE email = '$new_email'";
     $result = mysqli_query($connection, $query2);
     if (mysqli_num_rows($result) == 1) {
 

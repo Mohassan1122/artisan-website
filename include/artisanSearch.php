@@ -1,27 +1,56 @@
-<div class="container">
-  <br />
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-10 col-lg-8">
-    <label class="control-label text-light" for="search">Find Professional Services Near You..</label> 
-      <form class="card mb-5 card-sm" action="search.php" method="POST">
-        <div class="card-body row no-gutters align-items-center">
-          
-          <div class="col-auto">
-            <i class="fas fa-search h4 text-body"></i>
+<!-- Logo Design
+Wordpress
+Dropshipping
+Website Design -->
+<div class="container mt-4">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-9">
+      <div class="p-4 mt-3">
+        <h3 class="wrap_4 color_1 header_1 mt-5 text-center" >Find the perfect Artisan services for your business or need</h3>
+        <form action="./action.php" method="post">
+          <div class="input-group">
+            <input type="text" name="search" class="form-control" placeholder="Search....">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+            </div>
           </div>
-          <!--end of col-->
-          <div class="col">
-            <input class="form-control form-control-lg form-control-borderless" name="search" type="search" placeholder="Search for your Artisan">
-          </div>
-          <!--end of col-->
-          <div class="col-auto">
-            <button class="btn btn-lg btn-success" name="submit" type="submit">Search</button>
-          </div>
-          <!--end of col-->
-        </div>
-      </form>
-    </div>
-    <!--end of col-->
-  </div>
-</div>
+        </form>
 
+
+        <div class="row mt-4 g-1 px-4 mb-5">
+          <div class="col-md-2">
+            <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="./images/Mb8kaPV.png" width="50">
+              <div class="text-center mg-text"> <span class="mg-text">Account</span> </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="./images/pay.png" width="50">
+              <div class="text-center mg-text"> <span class="mg-text">Payments</span> </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="./images/tmqv0Eq.png" width="50">
+              <div class="text-center mg-text"> <span class="mg-text">Delivery</span> </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="./images/D0Sm15i.png" width="50">
+              <div class="text-center mg-text"> <span class="mg-text">Product</span> </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="./images/Z7BJ8Po.png" width="50">
+              <div class="text-center mg-text"> <span class="mg-text">Return</span> </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="./images/YLsQrn3.png" width="50">
+              <div class="text-center mg-text"> <span class="mg-text">Guarantee</span> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

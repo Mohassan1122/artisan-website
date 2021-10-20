@@ -4,185 +4,100 @@
 <head>
 
     <title>My Artisan</title>
+    <link rel="icon" href="./images/D0Sm15i.png">
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <!-- Custom fonts for this template -->
     <link href="fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="image/md.png">
+
 </head>
 
-<body class=" bg-light">
-
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-static-top">
-        <!-- Brand/logo -->
-
-        <img src="image/pic01.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
-        <a class="navbar-brand" href="./index.php"> My Artisan</a>
-
-        <div class="collapse  navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link active" href="index.php"><i class="fa fa-home" aria-hidden="true"></i> HOME</a>
-                <a class="nav-item nav-link" href="signup.php">Signup</a>
-                <a class="nav-item nav-link" href="login.php">Signin</a>
-                <a class="nav-item nav-link" href="#">About Us</a>
-            </div>
-        </div>
-
-    </nav>
-
-    <header class="masthead" style="background-image: url('image/Cap2.PNG')">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 p-3 mt-4 mx-auto">
-                    <marquee width="60%" direction="left" height="100px" class="text-light">
-                        If you dont have an account with us, Please Create an account here.
-                    </marquee>
-                    <div class="site-heading p-2 ">
-                        <h1 class="">my artisan</h1>
-                        <span class="subheading m-2 p-2">A Place for all kinds of artisan form different part of the World</span>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <br>
-    <div class="container border shadow">
-
-        <div class="card m-4">
-
-            <div class="card-header">
-                <svg height="100" width="100">
-                    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="white" />
-                    
-                </svg>
-                <svg height="80" width="100">
-                    <path stroke="black" d="M5 40 l215 0" />
-                </svg>
-                <svg height="100" width="100">
-                    <circle cx="50" cy="50" r="40" stroke="white" stroke-width="3" fill="white" />
-                </svg>
-
-                <h2 class="h1-responsive font-weight-bold text-center my-4">Registration Form</h2>
-            </div>
-            <div class="card-block">
-                <div class="container">
-
-                    <form class="form-horizontal" style="padding: 15px; margin: 0 auto; border-radius: 0.3em;" action="./include/action.php" method="POST">
-                        <div class="form-group">
-                            <div class="col-sm-9 col-sm-offset-3">
-                                <span class="help-block">*Required fields</span>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="fullName" class="col-sm-3 control-label">Full Name</label>
-                            <div class="col-sm-9">
-                                <input type="text" id="fullName" name="fullName" placeholder="Full Name" class="form-control" autofocus>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="col-sm-3 control-label">Email* </label>
-                            <div class="col-sm-9">
-                                <input type="email" id="email" name="email" placeholder="Email" class="form-control" name="email">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="col-sm-3 control-label">Password*</label>
-                            <div class="col-sm-9">
-                                <input type="password" id="password" name="user_password" placeholder="Password" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="col-sm-3 control-label">Confirm Password*</label>
-                            <div class="col-sm-9">
-                                <input type="password" id="password" name="confirm_password" placeholder="Password" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="birthDate" class="col-sm-3 control-label">Date of Birth*</label>
-                            <div class="col-sm-9">
-                                <input type="date" name="dateOfBirth" id="birthDate" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label col-sm-3">Gender</label>
-                            <div class="col-sm-6">
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <label class="radio-inline pl-3">
-                                            <input type="radio" name="radio1" id="femaleRadio" value="Female">Female
-                                        </label>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <label class="radio-inline pl-3">
-                                            <input type="radio" name="radio1" id="maleRadio" value="Male">Male
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <h2>Contact information</h2>
-                        <div class="form-group">
-                            <label for="phoneNumber" class="col-sm-3 control-label">Phone number </label>
-                            <div class="col-sm-9">
-                                <input type="number" name="phoneNumber" id="phoneNumber" placeholder="Phone number" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="phoneNumber" class="col-sm-3 control-label">Phone number2 </label>
-                            <div class="col-sm-9">
-                                <input type="number" name="phoneNumber2" id="phoneNumber" placeholder="Phone number2" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="Address" class="col-sm-3 control-label">Home Address</label>
-                            <div class="col-sm-9">
-                                <input type="text" id="home_address" name="home_address" placeholder="Home Address*" class="form-control" autofocus>
-                            </div>
-                        </div>
-                        <h2>Skills information</h2>
-
-                        <div class="form-group">
-                            <label for="Address" class="col-sm-3 control-label">
-                                <h5>Your Skill</h5>
-                            </label>
-                            <div class="col-sm-9">
-                                <textarea name="skill" id="skill" placeholder="type in your skill*" cols="10" rows="5" class="form-control" autofocus></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-9 ">
-
-                                <p>Upload your passport:</p>
-                                <input type="file" name="file">
-
-                            </div>
-                        </div>
-
-                        <button type="submit" name="submit" class="btn btn-primary btn-block">Register</button>
-
-
-                    </form>
-                </div>
-            </div>
-
-        </div>
-        <div class="container ml-4">
-            <h3>Already a member? </p> <a href="login.php" class="btn btn-primary">LOGIN</a> </h3>
-        </div>
+<body class="">
+    <div class="container">
+        <div class="mt-3 ml-3"><a href="index.php"><img src="./images/logo1.png" alt="Logo" width="200px" /></a></div>
     </div>
+    <hr class="mb-5">
+    <div class="container border " style="height:900px; width:500px; ">
+        <div class="row" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            <h3 class="mx-auto p-3 mr-4 ml-4  text-darker"> Get your free account</h3>
 
-    <br />
+        </div>
+        <form style="font-family: 'Arial Narrow', Arial, sans-serif; border-radius: 0.3em;" class="form-horizontal mr-4 ml-4 p-4" action="./include/action.php" method="POST" enctype="multipart/form-data">
 
-    <?php include './include/footer.php'; ?>
+            <div class="form-group p-1">
+                <label for="fullName" class="col-sm-3 control-label">Full Name</label>
 
+                <input type="text" id="fullName" name="fullName" placeholder="Full Name" class="form-control" autofocus>
+
+            </div>
+            <div class="form-group p-1">
+                <label for="email" class="col-sm-3 control-label">Email* </label>
+
+                <input type="email" id="email" name="email" placeholder="Email" class="form-control" >
+
+            </div>
+            <div class="form-group p-1">
+                <label for="password" class="col-sm-3 control-label">Password*</label>
+
+                <input type="password" id="password" name="user_password" placeholder="Password" class="form-control">
+
+            </div>
+            <div class="form-group p-1">
+                <label for="password" class=" control-label">Confirm Password*</label>
+
+                <input type="password" id="password" name="confirm_password" placeholder="Password" class="form-control">
+
+            </div>
+
+            <div class="form-group p-1">
+                <label for="exampleFormControlSelect1">What Service do you want?</label>
+                <select class="form-control" name="service" id="exampleFormControlSelect1">
+                    <option selected>choose....</option>
+                    <option>Artisan</option>
+                    <option>Client</option>
+                </select>
+            </div>
+
+            <div class="form-check mt-4">
+                <input class="form-check-input" name="mark" type="checkbox" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    You agree to Artisan Network <a href="">User Agreement</a> and <a href="">Privacy policy, </a>
+                </label>
+            </div>
+
+            <button type="submit" name="submit" class="btn btn-primary mt-4" style="width: 100%; ">Register</button>
+
+            <p style="font-family: 'Times New Roman', Times, serif;" class="text-muted small-text text-center mt-3">or Register with</p>
+            <div class="d-flex justify-content-between">
+                <button type="button" style="background: #67cf7f; padding: 5px 30px; color: #fff;" class="btn"><i class="fab fa-google"></i> Google</button>
+                <button type="button" style="background: #43619d; padding: 5px 30px; color: #fff;" class="btn"><i class="fab fa-facebook-f"></i> Facebook</button>
+            </div>
+
+        </form>
+
+
+        <hr class="ml-5 mr-5">
+        <div class="d-flex justify-content-between" style="font-family: 'Times New Roman', Times, serif;">
+            <a class="ml-5" href="forgot.html" style="text-decoration: none;">Forgot password ?</a>
+            <p class="mr-4 pr-3">Already on Artisan Network? <a href="login.php" style="text-decoration: none;">Log in</a></p>
+        </div>
+
+
+
+    </div>
+    <footer style="background-color: #f0efe6;">
+        <div class="container mt-4 p-4 text-center">
+            <p>©2021 Artisan Network, inc. All rights Reversed</p>
+            <span><a class="mt-4 text-dark" href="">Terms of Service</a> </span> <br>
+            <span><a class="text-dark" href="">Privacy Policy</a></span> <br>
+            <span><a class="text-dark" href="">Accessibility</a></span>
+
+        </div>
+
+    </footer>
 </body>

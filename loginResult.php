@@ -5,7 +5,7 @@ session_start();
 if (isset($_SESSION['email'])) {
   $new_email = $_SESSION['email'];
 
-  $query2 = "SELECT * FROM artisan WHERE email = '$new_email'";
+  $query2 = "SELECT * FROM register WHERE email = '$new_email'";
   $result = mysqli_query($connection, $query2);
   if (mysqli_num_rows($result) == 1) {
 
@@ -19,10 +19,10 @@ if (isset($_SESSION['email'])) {
 
 if (isset($_GET['id'])) {
   $id = $_GET['id'];
-  $query = "SELECT * FROM artisan WHERE id = '$id'";
+  $query = "SELECT * FROM register WHERE id = '$id'";
   $id_query = mysqli_query($connection, $query);
   if (!$id_query) {
-    die("QUERY FAILED" . mysqli_error($id_query));
+    echo "<script>alert('Query Failed');</script>";
   }
 
   if (mysqli_num_rows($id_query)) {
@@ -36,7 +36,7 @@ if (isset($_GET['id'])) {
 
 <head>
 
-  <title>My Artisan</title>
+  <title>My Artisian</title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -159,7 +159,7 @@ if (isset($_GET['id'])) {
 
         <?php
 
-        $query2 = "SELECT * FROM comment,artisan WHERE artisan.fullName=comment.artisan_name";
+        $query2 = "SELECT * FROM comment,register WHERE register.fullName=comment.register_name";
         $result = mysqli_query($connection, $query2);
 
         if (mysqli_num_rows($result)) {
@@ -203,11 +203,11 @@ if (isset($_GET['id'])) {
                 </div>
                 <div class="form-group col-sm-2">
                   <!-- <label for="exampleFormControlInput1">id</label> -->
-                  <input type="hidden" class="form-control" name="artisan_id" id="exampleFormControlInput1" value="<?php echo $row['id'];  ?>">
+                  <input type="hidden" class="form-control" name="register_id" id="exampleFormControlInput1" value="<?php echo $row['id'];  ?>">
                 </div>
                 <div class="form-group col-md-6">
                   <!-- <label for="exampleFormControlInput1">id</label> -->
-                  <input type="hidden" class="form-control" name="artisan_name" id="exampleFormControlInput1" value="<?php echo $row['fullName'];  ?>">
+                  <input type="hidden" class="form-control" name="register_name" id="exampleFormControlInput1" value="<?php echo $row['fullName'];  ?>">
                 </div>
                 <div class="form-group">
                   <input type="number" name="number" class="form-control" placeholder="Phone Number " value="" />

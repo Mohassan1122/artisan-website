@@ -77,11 +77,11 @@
 
             require_once './db_connect.php';
 
-            $query2 = "SELECT * FROM artisan, completeprofile WHERE artisan.id=completeprofile.artisan_id";
+            $query2 = "SELECT * FROM register, completeprofile WHERE register.id=completeprofile.register_id";
             $search_query = mysqli_query($connection, $query2);
             //print_r($search_query);
             if (!$search_query) {
-                die("QUERY FAILED" . mysqli_error($search_query));
+                echo "<script>alert('Query Failed');</script>";
             }
             $count = mysqli_num_rows($search_query);
             while ($row = mysqli_fetch_assoc($search_query)) {
@@ -91,14 +91,14 @@
 
                 <div class="row pt-5 p-3">
                     <div class="col-md-2">
-                        <img src="./image/<?php echo $row['file'];  ?>" style="max-width: 100px;" alt="" />
+                        <img src="./image/<?php echo $row['file'] ?>" style="max-width: 100px;" alt="" />
                     </div>
                     <!-- /.col-md-6 -->
                     <div class="col-md-10">
                         <div class="row align-items-center h-100">
                             <div class="col clear-fix">
 
-                                <a href="loginResult.php?id=<?php echo $row['artisan_id']; ?>" class=" btn btn-success m-4 float-right">
+                                <a href="loginResult.php?id=<?php echo $row['register_id']; ?>" class=" btn btn-success m-4 float-right">
                                     Contact!
                                 </a>
                                 <p class="lead"><?php echo $row['fullName'];  ?></p>
